@@ -1,0 +1,243 @@
+Log precedente cancellato! 
+Porta: 5000
+Timestamp: 1443530433.
+Dimensione mappa: 22 x 22
+Numero oggetti presenti: 101
+Anteprima della mappa:
+
+|V||V||V||V||V||V||O||O||V||V||V||V||V||V||O||V||O||V||O||V||V||V|
+|V||V||V||M||O||V||V||V||V||V||V||M||O||V||O||V||V||V||V||O||V||O|
+|V||O||V||V||V||V||O||V||M||V||O||V||M||V||M||O||O||V||M||V||O||V|
+|V||M||M||V||O||V||V||O||V||V||O||M||V||M||V||V||O||V||V||O||M||V|
+|V||O||V||V||O||V||V||V||V||O||O||O||V||O||M||M||V||V||M||V||O||V|
+|V||V||V||V||V||V||V||V||V||V||V||V||O||M||M||V||V||M||V||V||V||V|
+|V||V||V||V||O||V||V||V||M||V||V||O||O||M||M||V||V||V||M||M||V||O|
+|V||V||V||V||O||V||V||M||M||M||V||M||V||M||M||M||V||V||O||V||V||O|
+|V||V||M||V||V||V||V||V||V||V||M||O||O||O||O||V||V||V||V||V||O||O|
+|V||V||V||O||V||V||V||M||V||M||V||V||M||V||V||O||V||V||V||V||V||V|
+|V||V||V||V||V||V||V||M||M||V||O||V||O||V||V||O||V||O||M||V||V||V|
+|O||V||V||V||V||V||M||V||O||V||O||O||V||M||V||V||M||V||M||M||V||V|
+|V||V||V||V||V||V||V||V||V||M||V||V||M||O||O||O||M||O||V||V||V||V|
+|V||M||V||V||V||V||O||V||V||M||O||O||V||O||V||O||V||M||V||O||M||V|
+|V||M||O||O||V||M||V||M||M||V||V||V||M||V||M||V||V||V||V||V||M||V|
+|V||M||O||V||V||M||V||V||V||O||V||M||V||V||O||V||V||V||V||M||M||V|
+|V||V||O||V||O||V||V||M||M||O||V||O||V||O||V||V||M||M||V||V||O||V|
+|V||V||V||O||V||O||V||M||V||O||O||V||V||V||O||M||O||O||O||V||V||V|
+|O||V||V||V||V||M||V||O||V||V||V||O||M||M||V||O||V||V||V||V||M||V|
+|O||V||V||V||V||V||V||O||V||O||M||V||V||V||M||M||V||M||M||M||V||V|
+|V||O||M||V||V||M||O||V||M||V||M||O||V||M||O||O||V||M||O||V||O||V|
+|O||V||V||V||V||V||V||V||O||O||V||V||V||V||V||V||O||O||V||V||O||V|
+
+Avvio thread(tid): -1219273920.
+Tid: -1219273920 --- Login(nickname corretto): a.
+Tid: -1219273920 --- Utente: a --- Inserito in lista utenti collegati.
+Tid: -1219273920 --- Login(password corretta): a.
+Tid: -1219273920 --- Tentativi login: 0.
+Tid: -1219273920 --- Utente: a --- Avvio stampa lista degli utenti in gioco.
+Tid: -1219273920 --- Utente: a --- Avvio stampa numero degli oggetti rimanenti.
+Tid: -1219273920 --- Utente: a --- Avvio stampa numero degli oggetti trovati.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente: a --- Inserito in lista utenti in gioco.
+Tid: -1219273920 --- Utente: a --- Posizione respawn: AA.
+Tid: -1219273920 --- Utente: a --- Avvio gioco.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione BA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione CA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione DA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione EA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione FA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione GA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione HA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione IA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione JA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione KA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 1 --- Oggetti rimanenti: 100.
+Tid: -1219273920 --- Utente a spostato in posizione LA --- Trovato oggetto: Balzano ballerino.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione MA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione NA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione OA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione PA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione QA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione RA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 2 --- Oggetti rimanenti: 99.
+Tid: -1219273920 --- Utente a spostato in posizione SA --- Trovato oggetto: Oggetto mistico.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 3 --- Oggetti rimanenti: 98.
+Tid: -1219273920 --- Utente a spostato in posizione TA --- Trovato oggetto: Balzano ballerino.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione UA.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 4 --- Oggetti rimanenti: 97.
+Tid: -1219273920 --- Utente a spostato in posizione VA --- Trovato oggetto: L'arma del delitto.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente: a --- Tentato spostamento non valido.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente: a --- Tentato spostamento non valido.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VB.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VC.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VD.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VE.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VF.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VG.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VH.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 5 --- Oggetti rimanenti: 96.
+Tid: -1219273920 --- Utente a spostato in posizione VI --- Trovato oggetto: Mutande con cuori.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 6 --- Oggetti rimanenti: 95.
+Tid: -1219273920 --- Utente a spostato in posizione VJ --- Trovato oggetto: Salame affumicato.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VK.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VL.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VM.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VN.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VO.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VP.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 7 --- Oggetti rimanenti: 94.
+Tid: -1219273920 --- Utente a spostato in posizione VQ --- Trovato oggetto: Monte Fato.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 8 --- Oggetti rimanenti: 93.
+Tid: -1219273920 --- Utente a spostato in posizione VR --- Trovato oggetto: Oggetto mistico.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VS.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VT.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 9 --- Oggetti rimanenti: 92.
+Tid: -1219273920 --- Utente a spostato in posizione VU --- Trovato oggetto: Il lato oscuro della forza.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione VV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione UV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione TV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione SV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione RV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione QV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione PV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione OV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione NV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione MV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione LV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione KV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione JV.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 10 --- Oggetti rimanenti: 91.
+Tid: -1219273920 --- Utente a spostato in posizione IV --- Trovato oggetto: Rivista ose'.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 11 --- Oggetti rimanenti: 90.
+Tid: -1219273920 --- Utente a spostato in posizione HV --- Trovato oggetto: Cloroformio.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione HU.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione HT.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 12 --- Oggetti rimanenti: 89.
+Tid: -1219273920 --- Utente a spostato in posizione HS --- Trovato oggetto: Chewbecca.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione HR.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione HQ.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione IQ.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione JQ.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 13 --- Oggetti rimanenti: 88.
+Tid: -1219273920 --- Utente a spostato in posizione JP --- Trovato oggetto: Patata bollita.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione JO.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione KO.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione LO.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente: a --- Tentato spostamento non valido.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 14 --- Oggetti rimanenti: 87.
+Tid: -1219273920 --- Utente a spostato in posizione MO --- Trovato oggetto: Il mio teSSoro.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione NO.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Numero oggetti trovati: 15 --- Oggetti rimanenti: 86.
+Tid: -1219273920 --- Utente a spostato in posizione NN --- Trovato oggetto: Esame di ASD.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente a spostato in posizione NM.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Utente: a --- Tentato spostamento non valido.
+Tid: -1219273920 --- Inviata mappa al Client.
+Tid: -1219273920 --- Inviata mappa al Client.
+Trascorsi 15 secondi. Partita chiusa.
+Tid: -1219273920 --- L'utente a ha richiesto la lista degli utenti con gli oggetti trovati.
+Dimensione mappa: 21 x 21
+Numero oggetti presenti: 85
+Anteprima della mappa:
+
+|V||O||V||V||V||V||V||V||V||V||V||V||V||V||V||V||O||V||O||O||O|
+|V||M||M||O||V||V||O||V||O||M||M||M||V||M||M||V||V||V||V||O||V|
+|V||O||V||V||V||O||V||V||V||V||V||V||V||V||V||V||V||M||O||M||V|
+|V||O||V||V||V||M||M||V||O||V||V||V||V||V||O||V||M||M||V||V||O|
+|V||M||M||V||V||V||O||V||V||V||M||O||V||V||V||M||V||O||V||M||O|
+|O||M||O||V||O||V||M||O||V||O||V||V||V||V||M||O||V||V||V||V||O|
+|V||V||M||M||V||M||O||V||M||V||V||V||M||V||M||V||O||O||V||V||V|
+|V||V||V||O||V||V||O||V||V||O||M||V||O||O||V||V||V||V||V||V||V|
+|V||V||V||V||O||V||V||V||V||M||V||M||V||V||V||O||V||V||V||V||V|
+|V||V||V||V||V||O||O||V||V||M||O||V||V||V||V||V||V||V||O||V||V|
+|V||O||M||V||V||V||V||M||M||V||V||V||M||M||V||V||M||M||M||O||V|
+|V||O||V||V||V||V||V||V||O||V||V||M||V||V||V||M||M||O||O||V||V|
+|V||V||V||V||V||M||V||M||V||V||M||V||V||V||M||V||V||M||O||M||V|
+|V||O||M||V||V||V||V||M||O||V||V||V||V||V||O||O||V||O||V||V||O|
+|V||O||V||V||V||V||M||O||O||M||V||V||M||V||V||V||O||V||V||V||V|
+|O||V||V||V||M||V||M||V||V||M||V||M||O||V||V||M||V||O||V||V||O|
+|V||O||V||M||M||V||V||O||V||O||V||V||M||V||V||M||O||V||M||V||V|
+|V||V||V||V||V||V||M||V||O||V||V||V||V||M||V||O||V||M||M||V||O|
+|V||V||M||M||V||O||V||V||V||M||V||O||O||V||O||M||O||O||V||O||V|
+|O||M||V||O||V||V||V||M||O||V||V||V||O||O||V||V||O||V||V||V||V|
+|V||V||V||V||O||V||V||V||V||V||V||V||V||O||V||V||V||V||V||O||V|
+
+Tid: -1219273920 --- Tempo scaduto!
+Mappa ricreata con ID: 1!
+
+Tid: -1219273920 --- L'utente a ha effettuato il logout.
+Tid: -1219273920 --- Thread chiuso --- Utente: a.
+Terminato Server con CTRL-Z!
