@@ -1,49 +1,39 @@
 # Client-Server Game
 
+## Index
 
-## Topics covered
-
-1. General description
-2. Client Side
-  * In-depth sections
-    * Play
-    * Linked Users
-    * View remaining items
-    * See items found
-3. Server Side
-  * Implementation Details
-    * File Log.txt
-4. Client Server Communication
-5. Startup information
-    * Server Side
-    * Client Side
-6. Protocols used
-  * Implementation Details
-    * Socket TCP
-    * Pthread
-    * System Call I/O
-    * Signals
-    * Mutex
-7. They say about the game
-
-___
-
-## Authors
-
-:it: : Simone Margio
-
-:it: : Luca Ioffredo
-
-
-## General description
+1. [About](#About)
+2. [Client side](#Client-side)
+  * [Sections](#Sections)
+    * [Play](#Play)
+    * [Linked users](#Linked-users)
+    * [View remaining items](#View-remaining-items)
+    * [See items found](#See-item-found)
+3. [Server side](#Server-side)
+  * [Implementation details](#Implementation-details)
+    * [File Log](#File-Log)
+4. [Client Server Communication](#Client-Server-Communication)
+5. [Startup information](#Startup-information)
+    * [Server side](#Info-server-side)
+    * [Client side](#Info-client-side)
+6. [Protocols](#Protocols)
+  * [Implementation](#Implementation)
+    * [Socket TCP](#Socket-TCP)
+    * [Pthread](#Pthread)
+    * [System Call I/O](#System-call)
+    * [Signals](#Signals)
+    * [Mutex](#Mutex)
+    
+    
+## About
 
 A game based on the generation of a map where multiple connected players can compete with each other for the search for hidden objects.
 
 The map is generated randomly from the server.
 
 It consists of:
-- **Walls**: obstacles where it is not possible to position
-- **Hidden Objects**: objects to be found
+- **Walls**: obstacles where it is not possible to position.
+- **Hidden Objects**: objects to be found.
 
 The player who has found more objects is proclaimed a winner.
 
@@ -53,18 +43,17 @@ When a player enters the game play part time. In this period of time more player
 
 At the end of time the game ends. Players are brought back to the lobby and the server generates a new map.
 
-# Client Side
-![1](https://cloud.githubusercontent.com/assets/22590804/22682767/f0a5ffca-ed14-11e6-97ef-b6f23b2b19b0.png)
+# Client side
 
 When you start the client, you will see the menu in the picture, where you can:
--   Log in **[ Accedi ]**
--   Register as a new user **[ Registrati ]**
--   Exit the client program **[ Exit ]**
+-   Log in **[Accedi]**
+-   Register as a new user **[Registrati]**
+-   Exit the client program **[Exit]**
 
-If you do not have an account, you must go to the section **[ Registrati ]** to create a new user. The user will enter a nickname / username and password. This information will be sent to the server that controls the file containing all registered accounts.
+If you do not have an account, you must go to the section **[Registrati]** to create a new user. The user will enter a nickname / username and password. This information will be sent to the server that controls the file containing all registered accounts.
 
 If there is no user already registered with the nickname received, the server will return a confirmation message to the client. Conversely, you will be prompted for the user to try to enter a different nickname.
-Once the account is created through the function **[ Accedi ]** you will be prompted for entering the data (nickname / password) previously used for registration.
+Once the account is created through the function **[Accedi]** you will be prompted for entering the data (nickname / password) previously used for registration.
 
 Operation is the same. The client will send the data for access to the server, the latter will check in his / her file that there is a user with nicknames / passwords equal to those sent.
 If this search leads to a match then a confirmation message is sent to the client accessing the second menu.
@@ -76,92 +65,75 @@ Conversely, at the occurrence of:
 
 An error message will be returned and after three failures attempts, the client returns to the main menu screen.
 
-![2](https://cloud.githubusercontent.com/assets/22590804/22682847/6bd3f7ba-ed15-11e6-9b8c-fb4ee377ee18.png)
 
 After accessing a second menu, the player can use all the main features of the game.
 
 The selection includes:
--   Access to the game **[ Gioca ]**
--   View connected users **[ Utenti collegati ]** [:heavy_exclamation_mark:]
--   View the remaining objects **[ Vedi oggetti rimanenti ]**
--   View the objects found **[ Vedi oggetti trovati ]**
--   Go back to the previous menu **[ Torna indietro ]**
+-   Access to the game **[Gioca]**
+-   View connected users **[Utenti collegati]**
+-   View the remaining objects **[Vedi oggetti rimanenti]**
+-   View the objects found **[Vedi oggetti trovati]**
+-   Go back to the previous menu **[Torna indietro]**
 
-:heavy_exclamation_mark:
-:point_right: All connected users are defined in the following menus and those in the current game.
 
-### Deepening sections
-#### :large_blue_diamond: Plays
+## Sections
+### Play
 
-![3](https://cloud.githubusercontent.com/assets/22590804/22682862/81ff143e-ed15-11e6-962b-c3988b07f640.png)
-
-It's the heart of the program. The player displays the current map generated by the Server and sent to the Client. The map has hidden objects and obstacles (these are visible from the symbol |M|  [:heavy_exclamation_mark:]).  
+It's the heart of the program. The player displays the current map generated by the Server and sent to the Client. The map has hidden objects and obstacles (these are visible from the symbol |M|.
 
 The player is asked to specify a location from which to search for objects.
 
 Opportunity controls allow no player to place themselves in a gaming cell if:
--   There is another player
--   There is a wall
--   Coordinates for positioning do not exist
+-   There is another player.
+-   There is a wall.
+-   Coordinates for positioning do not exist.
 
-:star: **Feature**: In order to avoid various players' misfortunes, each opponent will have a different color (brown) from the current player (green). Also all objects found will be highlighted in the map ( blue color with symbol |o|). 
+In order to avoid various players' misfortunes, each opponent will have a different color (brown) from the current player (green). Also all objects found will be highlighted in the map ( blue color with symbol |o|). 
 Since each map is randomized to size, each player can participate in a default number of players each time. If the maximum number is reached, the player trying to enter an appropriate message will inform him of the situation.
 
-
-:heavy_exclamation_mark:
-:point_right: In order to avoid stalling situations, a special wall-generation system has been defined which avoids inserting them into the edges of the map.
+In order to avoid stalling situations, a special wall-generation system has been defined which avoids inserting them into the edges of the map.
 
 Opportunity information will be present on the game map to inform you about the possible actions you can take.
 
-![4](https://cloud.githubusercontent.com/assets/22590804/22682868/8b6078ec-ed15-11e6-8208-836702462f03.png)
 
 The legend will always be accessible to every map update and the player can at any time access information such as:
--   User list with the related objects found **[ L ]**
--   Number of remaining items **[ O ]**
--   Get out of the game **[ . ]**
+-   User list with the related objects found **[L]**
+-   Number of remaining items **[O]**
+-   Get out of the game **[.]**
 
 
-Also, as shown in the picture, there is a timer showing the elapsed time of the current match [:heavy_exclamation_mark:]. 
+Also, as shown in the picture, there is a timer showing the elapsed time of the current match. 
 
-:star: **Feature**: To prevent each user from navigating by pressing the appropriate key and then sending to confirm, a system call ("/ bin / stty raw") was used to allow the game to move within the game map quickly and realistic. Each player can use the WASD keys or directional arrows to navigate without any problems and without using the sender to confirm the choice.
+To prevent each user from navigating by pressing the appropriate key and then sending to confirm, a system call ("/ bin / stty raw") was used to allow the game to move within the game map quickly and realistic. Each player can use the WASD keys or directional arrows to navigate without any problems and without using the sender to confirm the choice.
 
 In addition, when the match ends while the user is entering the coordinates, a message is sent to the position submission that informs the user of the termination of the current match.
 After the message, it is returned to the game menu.
 
-:star: **Feature**: If the player decides to leave the game before the end of time, or if all of the objects are exhausted, he may fall back on finding all the objects previously taken.
+If the player decides to leave the game before the end of time, or if all of the objects are exhausted, he may fall back on finding all the objects previously taken.
 
 
-:heavy_exclamation_mark:
-:point_right: The time available for each game is set at fifteen seconds.
+The time available for each game is set at fifteen seconds.
 
-#### :large_blue_diamond: Linked Users
+#### Linked users
 
 Connected users are shown with the related objects found.
 
-*More details*: the user list is structured as a Search Binary Tree (ABR) where each user is entered in alphabetical order in the appropriate structure. This choice facilitates and improves the search for a particular user or eliminates it.
+The user list is structured as a Search Binary Tree (ABR) where each user is entered in alphabetical order in the appropriate structure. This choice facilitates and improves the search for a particular user or eliminates it.
 
-#### :large_blue_diamond: See remaining items
-
-![6](https://cloud.githubusercontent.com/assets/22590804/22682879/9db9ecf8-ed15-11e6-8216-9cfebc746e03.png)
-
+#### View remaining items
 
 The number of objects hidden in the game map is displayed and ready to be found.
 
-*More details*: simple and functional, the objects in the map are defined as a global variable. Each time a user finds an object, it is decremented and initialized each time a new game session is generated.
+Simple and functional, the objects in the map are defined as a global variable. Each time a user finds an object, it is decremented and initialized each time a new game session is generated.
 As with the walls, the number of objects present in a game is accurately chosen depending on the size of the map itself.
 
-#### :large_blue_diamond: See items found
-
-![5](https://cloud.githubusercontent.com/assets/22590804/22682875/96cf4b9a-ed15-11e6-8b41-861a9593e993.png)
+#### See item found
 
 All the objects found by every single user in the game will be shown.
 If the selection of the objects found is made in the game menu and not in the game, only the total number of objects found will be shown.
 
-___
 
-# Server Side
-
-![8](https://cloud.githubusercontent.com/assets/22590804/22682926/d9b522c2-ed15-11e6-938f-22bfedb80316.png)
+# Server side
 
 Once started, specifying its port, the server does not need any intervention from the game administrators or hosts.
 
@@ -169,32 +141,30 @@ As shown in the figure, the only output of the server guarantees the performer t
 
 In conclusion, the Server does not output any output to STDOUT, excluding the case above and appropriate errors sent to STDERR output; and receives no input from STDIN.
 
-*More details*: if the server is started by specifying a port in the range of ports reserved for root jobs (0-1023), a message will alert the performer and the server will require the correct port entry.
+If the server is started by specifying a port in the range of ports reserved for root jobs (0-1023), a message will alert the performer and the server will require the correct port entry.
 
-#### :large_blue_diamond: Implementation details
+#### Implementation details
 
 The server is of type **competing multi-thread**. 
 It accepts a new connection, and as soon as the object that represents the socket is obtained, it creates a new thread to delegate the task of responding to the connection client.
 
 After creating the 'slave' thread, the main thread returns to wait for additional connections.
 
-:star: **Feature**: At the first start, the first map is created and printed in the "log.txt" file. Each time the game ends, the server keeps track of the newly created map.
+At the first start, the first map is created and printed in the "log.txt" file. Each time the game ends, the server keeps track of the newly created map.
 
-#### :large_blue_diamond: File Log.txt
-
-![9](https://cloud.githubusercontent.com/assets/22590804/22682931/e04e9e6a-ed15-11e6-8ddd-367c9cada4a8.png)
+#### File Log
 
 The file *“log.txt”* represents a concrete area of information.
 The server keeps track of the file not only of the user interactions, but also the threads of each user's threads.
 
 Inside, you can find information about:
--   Used door
--   Map information (such as number of objects)
--   Complete map printing with appropriate indicators to show the location of each object
--   Information on the correct login or not of a user
--   The starting position of a user in the map
--   Information about moving each user
--   A player's exit from the game
+-   Used door.
+-   Map information (such as number of objects).
+-   Complete map printing with appropriate indicators to show the location of each object.
+-   Information on the correct login or not of a user.
+-   The starting position of a user in the map.
+-   Information about moving each user.
+-   A player's exit from the game.
 -   More ...
 
 # Client Server Communication
@@ -207,7 +177,12 @@ For example:
 
 Client: 
 
-![10](https://cloud.githubusercontent.com/assets/22590804/22682940/e988b470-ed15-11e6-9503-c2d53230b18f.png)
+```c
+if( write(fdsocket,nickname,strlen(nickname)) < 0 ) errori_generali(5); 
+if( read(fdsocket,&flag_user,1) <= 0 ) errori_generali(6);              
+
+if( flag_user == 'e' )
+```
 
 1.  The first write will send a nickname to the server
 2.  The client will wait through the read control character sent by the server
@@ -215,7 +190,18 @@ Client:
 
 Server:
 
-![11](https://cloud.githubusercontent.com/assets/22590804/22682941/e98d0f3e-ed15-11e6-9aed-639deca993c3.png)
+```c
+if( (numero_lettere_lette=read(fd2,appoggio,MAXSIZE)) < 0 ) errori_generali(8); 
+appoggio[numero_lettere_lette] = '\0';
+
+flag_user = controllo_utente(appoggio,1,file);
+
+                        
+if( flag_user == -1 )
+{
+    contatore++;
+    if( write(fd2,"e",1) < 0 ) errori_generali(9);
+```
 
 1.  The first read will read the nickname of the player sent by the client
 2.  After appropriate checks, the server decides, for example, to send "e" as a control letter through a write
@@ -225,15 +211,21 @@ A further example:
 
 Client: 
 
-![12](https://cloud.githubusercontent.com/assets/22590804/22682942/e98d71b8-ed15-11e6-8896-ba1839d3826a.png)
-
-1. An appropriate case selection 1 leads to writing the number 1 to the server by writing
+```c
+ if( write(fd,"o",1) < 0 ) 
+```
+An appropriate case selection 1 leads to writing the number 1 to the server by writing
 
 Server:
 
-![13](https://cloud.githubusercontent.com/assets/22590804/22682943/e98ff01e-ed15-11e6-9bf7-80068a8dadca.png)
+```c
+switch(flag_menu)
+{
+    case '1':
+	  if((file=open("database.txt",O_RDWR | O_CREAT, S_IRWXU))<0) errori_generali(7);
+```
 
-1. The read server will read the read character, in this case 1, and in a similar way to the client, through a case will select the appropriate procedure to be executed, in this case the login.
+The read server will read the read character, in this case 1, and in a similar way to the client, through a case will select the appropriate procedure to be executed, in this case the login.
 
 *More info:*
 -   If the server receives a SIGPIPE signal or termination character from the client, the client thread is deleted, while the root remains running to wait or serve the other clients already connected.
@@ -247,25 +239,24 @@ Server:
 By using any command interpreter, you can start running both client and server programs.
 If you are having trouble executing these, you can check the correctness of the commands below.
 
-## Server side
+## Info server side
 
 1. Locate the root folder and open it
 2. Right-click anywhere and click on "open a terminal here". Eventually you can reach the folder by specifying its path.
-3. Verify that you have the right execution permissions ('man chmod' for info)
+3. Verify that you have the right execution permissions ('man chmod' for info).
 4. Write on the terminal:
 
 ```
 gcc -pthread main.c -o Server Then write: ./Server <porta>
 ```
 
-:heavy_exclamation_mark:
-:point_right: \<porta\> must be replaced with the port number you want to use. Inserting an invalid port will be notified.
+Remeber that \<porta\> must be replaced with the port number you want to use. Inserting an invalid port will be notified.
 
-## Client side
+## Info client side
 
-1. Locate the root folder and open it
+1. Locate the root folder and open it.
 2. Right-click anywhere and click on "open a terminal here". Eventually you can reach the folder by specifying its path.
-3. Verify that you have the right execution permissions ('man chmod' for info) 
+3. Verify that you have the right execution permissions ('man chmod' for info) .
 4. Write on the terminal:
 
 ```
@@ -277,90 +268,89 @@ gcc main.c errori.c -o Client
 ```
 ./Client <Porta> <Indirizzo IP>
 ```
-:heavy_exclamation_mark:
-:point_right: Porta and Indirizzo IP must be replaced with the current server values to which you want to connect.
+
+Porta and Indirizzo IP must be replaced with the current server values to which you want to connect.
 
 *Note:* When compiling the server and client, you can view any warnings. They are not a problem for the proper use and operation of both programs.  
 Warnings are generated by the use of the "perror.h" library and the particular sequence that allows you to print colored characters.
 
-:heavy_exclamation_mark:
-:point_right: in case clients and servers run on the same machine, then \<Indirizzo IP>\ will be 127.0.0.1
+In case clients and servers run on the same machine, then \<Indirizzo IP>\ will be 127.0.0.1
 
-# Protocols used
+# Protocols
 
 The family of protocols used is AF_INET (Internet Address Family).
 By using these protocols, communication does not only occur locally, but also through the Internet.
 The message transmission type is SOCK_STREAM.
 Through this type of choice, the transmission is streamlined, sequential and reliable.
 
-# Implementation details
+# Implementation
 ## Socket TCP
 
 ```c
-/* Composizione dell'indirizzo */ 
+/* Address composition */ 
 struct sockaddr_in my_addr; 
 
-/* portno = numero di porta; fd e fd2 = Connessioni rispettivamente del server e del client */ 
+/* porta = port number; fd and fd2 = Connections of the server and the client respectively */ 
 int porta, fd, fd2; 
 
-/* Assegnamento della famiglia di protocolli */ 
+/* Assignment of the family of protocols */ 
 sin.sin_family = AF_INET; 
 
-/* Creazione del socket TCP */ 
+/* Creating the TCP socket */ 
 socket(AF_INET, SOCK_STREAM, 0); 
 
-/* Host TO Network Short --- conversione in formato numerico per il network */ 
+/* Host TO Network Short --- conversion to numeric format for the network */ 
 my_addr.sin_port = htons(porta); 
 
-/* Host TO Network Short --- conversione in formato numerico per il network */ 
+/* Host TO Network Short --- conversion to numeric format for the network */ 
 my_addr.sin_addr.s_addr = htonl(INADDR_ANY); 
 
-/* Associazione del socket TCP all'indirizzo */ 
+/* Association of the TCP socket to the address */ 
 bind(fd, (struct sockaddr *) &my_addr, sizeof(my_addr)) != 0 ) 
 
-/* Il server rimane in ascolto per le richieste di connessione del client */ 
+/* The server listens for client connection requests */ 
 listen(fd,5) 
 
-/* Accetta la connessione del client */ 
+/* Accept the client connection */ 
 accept(fd, NULL, NULL); 
 
-/* Chiudi la connessione */ 
+/* Close the connection */ 
 close(fd); 
 ```
 
 ## Pthread
 
 ```c
-/* creazione nuovo thread */ 
+/* Creating new thread */ 
 pthread_create(&tid,NULL,funzione_principale,(void *)&fd2)
 
-/* chiusura del thread */ 
+/* Closing the thread */ 
 pthread_exit (); 
 ```
 
-## System Call I/O
+## System call
 
 ```c
-/* file descriptor per il file di logging e per accedere al file database.txt */ 
+/* File descriptor for the logging file and to access the database.txt file */ 
 int fd_log, file; 
 
-/* Apre <File> in modalità <Mode> con i permessi <Permessi>. Restituisce -1 in caso di errore, zero altrimenti */ 
+/* Open <File> in <Mode> mode with <Permess> permissions. Returns -1 if an error occurs, zero otherwise */ 
 file = open (“<File>”,<Mode>,<Permessi>);
 
-/* Lettura del file <File> e salvataggio in “string”. Memorizza al massimo 1 carattere. Restituisce -1 in caso di errore, un numero maggiore di zero altrimenti */ 
+/* Reading the <File> file and saving it in “string”. Stores a maximum of 1 character. Returns -1 if an error occurs, a number greater than zero otherwise */ 
 read (file,string,1); 
 
-/* Scrittura su file <File> del contenuto della stringa “string”. Restituisce -1 in caso di errore, un numero maggiore di zero altrimenti */ 
+/* Writing to file <File> of the contents of the string "string". Returns -1 if an error occurs, a number greater than zero otherwise */ 
 write (file,string,strlen(string)); 
 
-/* chiudo il file descriptor */ 
+/* Close the descriptor file */ 
 close (file); 
 ```
 
-## Segnali
+## Signals
 
 ```c
-/* Handler <funzione> per il segnale <segnale> */
+/* Handler <function> for the <signal> signal */
 signal (<segnale>,<funzione>);
 ```
 Signals used:
@@ -371,38 +361,15 @@ Signals used:
 ## Mutex
 
 ```c
-/* Creazione nuovo mutex */ 
+/* Creation of a new mutex */ 
 pthread_mutex_t a; 
 
-/* Inizializzazione mutex */
+/* Mutex initialization */
 pthread_mutex_init(&a, NULL);
 
-/* Blocco del semaforo. Inizio zona critica */ 
+/* Traffic light block. Critical zone start */ 
 pthread_mutex_lock(&a); 
 
-/* Rilascio del mutex. Fine zona critica */ 
+/* Release of the mutex. End of critical zone */ 
 pthread_mutex_unlock(&a); 
 ```
-
-# They say about the game
-*"Fun for the whole family"* - **Orphan**
-
-*"I see black"* - **Zucchero**
-
-*"Mee to"* - **Bocelli**
-
-*"Damn map, I do not find the apple"* - **Steve Jobs**
-
-*"WOW, I found the katana bitch!"* - **Lo Wang**
-
-*"I just love it because there are walls and no Mexican"* - **Donald trump**
-
-*"My cousin also made a game so, but more beautiful"* - **Bm**
-
-*"The black background is ugly, better white"* - **Michael Jackson**
-
-*"I always break against the walls"* - **Spastic**
-
-*"Fantastic! Especially because my nickname is available: Satana666"* - **Pope Francesco**
-
-*"I'd rather be paid. But then, if it costs a little I do not take it"* - **Apple User**
