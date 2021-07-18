@@ -39,9 +39,9 @@ The player who has found more objects is proclaimed a winner.
 
 When a server starts, a map is generated.
 
-When a player enters the game play part time. In this period of time more players can enter up to a maximum limit calculated by the size of the generated maps. Each player selects the box from where to leave and when ready he can begin searching for hidden objects.
+When a player enters the gameplay part-time. In this period more players can enter up to a maximum limit calculated by the size of the generated maps. Each player selects the box from where to leave and when ready he can begin searching for hidden objects.
 
-At the end of time the game ends. Players are brought back to the lobby and the server generates a new map.
+At the end of time, the game ends. Players are brought back to the lobby and the server generates a new map.
 
 # Client side
 
@@ -50,17 +50,17 @@ When you start the client, you will see the menu in the picture, where you can:
 -   Register as a new user **[Registrati]**
 -   Exit the client program **[Exit]**
 
-If you do not have an account, you must go to the section **[Registrati]** to create a new user. The user will enter a nickname / username and password. This information will be sent to the server that controls the file containing all registered accounts.
+If you do not have an account, you must go to the section **[Registrati]** to create a new user. The user will enter a nickname/username and password. This information will be sent to the server that controls the file containing all registered accounts.
 
 If there is no user already registered with the nickname received, the server will return a confirmation message to the client. Conversely, you will be prompted for the user to try to enter a different nickname.
-Once the account is created through the function **[Accedi]** you will be prompted for entering the data (nickname / password) previously used for registration.
+Once the account is created through the function **[Accedi]** you will be prompted for entering the data (nickname/password) previously used for registration.
 
-Operation is the same. The client will send the data for access to the server, the latter will check in his / her file that there is a user with nicknames / passwords equal to those sent.
+The operation is the same. The client will send the data for access to the server, the latter will check in his/her file that there is a user with nicknames/passwords equal to those sent.
 If this search leads to a match then a confirmation message is sent to the client accessing the second menu.
 
 Conversely, at the occurrence of:
--   Nickname and / or password do not match.
--   The user is not registered with that nickname / password.
+-   Nickname and/or password do not match.
+-   The user is not registered with that nickname/password.
 -   User already logged in with those login data.
 
 An error message will be returned and after three failures attempts, the client returns to the main menu screen.
@@ -88,10 +88,10 @@ Opportunity controls allow no player to place themselves in a gaming cell if:
 -   There is a wall.
 -   Coordinates for positioning do not exist.
 
-In order to avoid various players' misfortunes, each opponent will have a different color (brown) from the current player (green). Also all objects found will be highlighted in the map ( blue color with symbol |o|). 
+To avoid various players' misfortunes, each opponent will have a different color (brown) from the current player (green). Also, all objects found will be highlighted in the map ( blue color with symbol |o|). 
 Since each map is randomized to size, each player can participate in a default number of players each time. If the maximum number is reached, the player trying to enter an appropriate message will inform him of the situation.
 
-In order to avoid stalling situations, a special wall-generation system has been defined which avoids inserting them into the edges of the map.
+To avoid stalling situations, a special wall-generation system has been defined which avoids inserting them into the edges of the map.
 
 Opportunity information will be present on the game map to inform you about the possible actions you can take.
 
@@ -124,7 +124,7 @@ The user list is structured as a Search Binary Tree (ABR) where each user is ent
 
 The number of objects hidden in the game map is displayed and ready to be found.
 
-Simple and functional, the objects in the map are defined as a global variable. Each time a user finds an object, it is decremented and initialized each time a new game session is generated.
+Simple and functional, the objects in the map are defined as global variable. Each time a user finds an object, it is decremented and initialized each time a new game session is generated.
 As with the walls, the number of objects present in a game is accurately chosen depending on the size of the map itself.
 
 #### See item found
@@ -159,10 +159,10 @@ The server keeps track of the file not only of the user interactions, but also t
 
 Inside, you can find information about:
 -   Used door.
--   Map information (such as number of objects).
+-   Map information (such as a number of objects).
 -   Complete map printing with appropriate indicators to show the location of each object.
 -   Information on the correct login or not of a user.
--   The starting position of a user in the map.
+-   The starting position of a user on the map.
 -   Information about moving each user.
 -   A player's exit from the game.
 -   More ...
@@ -171,7 +171,7 @@ Inside, you can find information about:
 
 Server client communication has been defined and built to ensure perfect synchronization between the two.
 Certain requests that are sent by the client are preceded by the sending of a character used to select the required operation. An additional check will be performed by the server by sending a confirmation character to the client.
-The latter can represent both a normal control and certify the correct selection of the operation required by the server, and a special character to select a part of code to run to the client.
+The latter can represent both normal control and certify the correct selection of the operation required by the server, and a special character to select a part of code to run to the client.
 
 For example:
 
@@ -229,9 +229,9 @@ The read server will read the read character, in this case 1, and in a similar w
 
 *More info:*
 -   If the server receives a SIGPIPE signal or termination character from the client, the client thread is deleted, while the root remains running to wait or serve the other clients already connected.
--   During a game, in order to avoid that two or more clients try to access the various map boxes at the same time, mutexes on reading and writing for the various global variables were used. When a game ends, the last thread that is accessing the global flag of the map changes the variable so that each client at the next "read" receives a message informing the user about the termination of the match.
+-   During a game, to avoid that two or more clients try to access the various map boxes at the same time, mutexes on reading and writing for the various global variables were used. When a game ends, the last thread that is accessing the global flag of the map changes the variable so that each client at the next "read" receives a message informing the user about the termination of the match.
 -   Each thread stores the ID of the current match at birth, so that each interaction can check that the current game map has not been re-created; if the ID is different, the user is informed by the client and the ID is updated.
--   In the event that a client is terminated via CTRL-C, the server will receive a SIGPIPE signal and remove the player that has just closed the game if the player is in the game.
+-   If a client is terminated via CTRL-C, the server will receive a SIGPIPE signal and remove the player that has just closed the game if the player is in the game.
 -   If you end the server using the CTRL-C or CTRL-Z command, a message is printed on STDERR and the server ends.
 
 # Startup information
@@ -250,7 +250,7 @@ If you are having trouble executing these, you can check the correctness of the 
 gcc -pthread main.c -o Server Then write: ./Server <porta>
 ```
 
-Remeber that \<porta\> must be replaced with the port number you want to use. Inserting an invalid port will be notified.
+Remember that \<porta\> must be replaced with the port number you want to use. Inserting an invalid port will be notified.
 
 ## Info client side
 
